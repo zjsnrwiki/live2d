@@ -1,0 +1,8 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":200,
+	"fade_out":200,
+	"params":[
+		{"id":"PARAM_Skirt_UP","val":1,"def":0}
+	]
+}

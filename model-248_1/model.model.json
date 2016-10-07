@@ -1,0 +1,78 @@
+{
+	"type": "Live2D Model Setting",
+	"name": "model",
+	"model": "model.moc",
+	"textures": [
+		"model.1024/texture_00.png",
+		"model.1024/texture_01.png",
+		"model.1024/texture_02.png"
+	],
+	"physics":"physics.json",
+	"name":"",
+	    "hit_areas": [
+        { "name": "head", "id": "D_REF_Face_Touch" },
+        { "name": "obai", "id": "D_REF_Obai_Touch" },
+        { "name": "skirt", "id": "D_REF_Skirt_Touch" }
+    ],
+
+    "motions": {
+        "idle": [
+            { "file": "Oyodo_ordinarily.mtn", "fade_in": 0, "fade_out": 0, "priority": 1, "sound": "test" },
+            { "file": "Oyodo_ordinarily_blink.mtn", "fade_in": 0, "fade_out": 0, "priority": 1, "sound": "test" },
+            { "file": "Oyodo_ordinarily_look_around.mtn", "fade_in": 0, "fade_out": 0, "priority": 1, "sound": "test" },
+            { "file": "Oyodo_ordinarily_recreation.mtn", "fade_in": 0, "fade_out": 0, "priority": 1, "sound": "test" }
+        ],
+
+        "shy": [
+            { "file": "Oyodo_shield_the_privates.mtn", "fade_in": 0, "fade_out": 0, "priority": 2, "sound": "test" }
+        ],
+
+        "skirt": [
+            { "file": "Oyodo_shield_the_privates.mtn", "fade_in": 0, "fade_out": 0, "priority": 2, "sound": "test" }
+        ],
+
+        "smile": [
+        	{ "file": "Oyodo_ordinarily_smile.mtn", "fade_in": 0, "fade_out": 0, "priority": 2, "sound": "test" },
+            { "file": "Oyodo_ordinarily_spoiled.mtn", "fade_in": 0, "fade_out": 0, "priority": 2, "sound": "test" }
+        ],
+
+        "suprise": [
+            { "file": "Oyodo_shield_the_chest.mtn", "fade_in": 0, "fade_out": 0, "priority": 2, "sound": "test" }
+        ]
+    },
+
+    "expressions": [
+        { "name": "skirt_up", "file": "Skirt_UP.json" },
+        { "name": "skirt_down", "file": "Skirt_DOWN.json" }
+    ],
+
+    /* ｵ･ﾎｻﾊﾇｺﾁﾃ・*/
+    "trigger": [
+        { "id": "D_REF_Skirt_Touch", "actionType": "up", "action": [ "skirt_up", "shy", "skirt_down" ], "delay": 10000, "delay_type": 2, "interval": [ 0, 200 ] ,"dialogue":"都说过了…这种事情是不允许的啦！提督，坏心眼！"},
+        { "id": "D_REF_Face_Touch", "actionType": "stroke", "action": [ "smile" ], "delay": 10000, "delay_type": 2, "interval": [ 0 ] ,"dialogue":"您一直盯着的话…我…倒不是很困扰啦……"},
+        { "id": "D_REF_Obai_Touch", "actionType": "click", "action": [ "suprise" ], "delay": 10000, "delay_type": 2, "interval": [ 0 ] ,"dialogue":"就…就算您是长官！这种事情也是不允许的！"}
+    ],
+
+    "auto_action": {
+        "action": "idle" , "delay" :  30000
+    },
+
+    "head_offset": {
+        "x": 0,
+        "y": 300
+    },
+    /* ¸¡µãÊý±íÊ¾»ùÓÚ1024 * 576Çé¿öÏÂµÄ±ÈÀý */
+    "head_range": {
+        "x": 0.65,
+        "y": 0.65
+    },
+
+	"bodyRange": {
+        "x": 0.4
+    },
+    
+	"eyeRange": {
+        "x": 0.9,
+        "y": 0.9
+    }
+}

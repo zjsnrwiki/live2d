@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Live 2D</title>
+    <script src="src/live2d.min.js"></script>
+    <script src="src/Live2DFramework.js"></script>
+    <script src="src/MatrixStack.js"></script>
+    <script src="src/ModelSettingJson.js"></script>
+    <script src="src/PlatformManager.js"></script>
+    <script src="src/LAppModel.js"></script>
+    <script src="src/main.js"></script>
+  </head>
+  <body>
+    <div id='live2d-container' style='display:none;'>
+      <div id='live2d-background' style='background-size:cover;width:640px;height:768px'>
+        <canvas id="live2d-canvas" width="640" height="768"></canvas>
+      </div>
+    </div>
+    <button id='live2d-button' onclick='l2d_main()'>点击显示</button>
+  </body>
+</html>
